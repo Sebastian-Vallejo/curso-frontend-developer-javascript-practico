@@ -349,10 +349,13 @@ aside {
   z-index: 2;
   padding: 12px;
   border-radius: 50%;
+  border: 1px solid var(--very-light-pink);
+  
 }
 
 .product-detail-close:hover {
   cursor: pointer;
+  background-color: var(--hospital-green);
 }
 
 #product-detail>img:nth-child(2) {
