@@ -5,33 +5,33 @@ const mobile_menu_icon = document.querySelector('.menu');
 const mobile_menu = document.querySelector('.mobile-menu');
 
 const navbar_shopping_cart = document.querySelector('.navbar-shopping-cart')
-const aside_menu = document.querySelector('.product-detail');
+const shopping_cart_container = document.querySelector('#shopping-cart');
 
 const cards_container = document.querySelector('.cards-container');
 
 navbar_email.addEventListener('click', toggle_desktop_menu);
 mobile_menu_icon.addEventListener('click', toggle_mobile_menu);
-navbar_shopping_cart.addEventListener('click', toggle_aside_menu);
+navbar_shopping_cart.addEventListener('click', toggle_shopping_cart_container);
 
 function toggle_desktop_menu() {
     console.log('desktop-menu was clicked');
-    const is_aside_menu_closed = aside_menu.classList.contains('inactive')
-    if (!is_aside_menu_closed) {
-        aside_menu.classList.add('inactive');
+    const is_shopping_cart_container_closed = shopping_cart_container.classList.contains('inactive')
+    if (!is_shopping_cart_container_closed) {
+        shopping_cart_container.classList.add('inactive');
     }
     desktop_menu.classList.toggle('inactive');
 }
 
 function toggle_mobile_menu() {
     console.log('mobile-menu was clicked');
-    const is_aside_menu_closed = aside_menu.classList.contains('inactive');
-    if (!is_aside_menu_closed) {
-        aside_menu.classList.add('inactive');
+    const is_shopping_cart_container = shopping_cart_container.classList.contains('inactive');
+    if (!is_shopping_cart_container) {
+        shopping_cart_container.classList.add('inactive');
     }
     mobile_menu.classList.toggle('inactive');
 }
 
-function toggle_aside_menu() {
+function toggle_shopping_cart_container() {
 
     const is_mobile_menu_closed = mobile_menu.classList.contains('inactive');
     const is_desktop_menu_closed = desktop_menu.classList.contains('inactive');
@@ -44,7 +44,7 @@ function toggle_aside_menu() {
         mobile_menu.classList.add('inactive');
     }
 
-    aside_menu.classList.toggle('inactive');
+    shopping_cart_container.classList.toggle('inactive');
 
 
 
